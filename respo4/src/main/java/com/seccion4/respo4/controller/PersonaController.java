@@ -26,10 +26,7 @@ public class PersonaController {
     PersonaController(PersonaService personaService) {
         this.personaService = personaService;
     }
-    @GetMapping
-    public String saludar(){
-        return "Holanda";
-    }
+
     @PostMapping
     public Persona guardar(@RequestBody Persona persona){
         return personaService.guardarPersona(persona);
