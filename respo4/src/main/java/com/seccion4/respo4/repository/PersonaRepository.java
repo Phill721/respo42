@@ -8,10 +8,10 @@ import org.springframework.stereotype.Repository;
 import com.seccion4.respo4.model.Persona;
 @Repository
 public class PersonaRepository {
-    List<Persona> persona = new ArrayList<>();
+    List<Persona> personas = new ArrayList<>();
     
-    public Persona create(Persona p){
-        persona.add(p);
-        return p;
+    public Persona create(Persona persona){
+        personas.add(persona);
+        return persona;
     }
 }
