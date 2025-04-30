@@ -8,9 +8,11 @@ import com.seccion4.respo4.service.PersonaService;
 
 import java.util.List;
 
+
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.beans.factory.annotation.Autowired;
 
 
 
@@ -18,7 +20,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequestMapping("/api/personas")
 @RestController
 public class PersonaController {
-
+    @Autowired
     private final PersonaService personaService;
 
     PersonaController(PersonaService personaService) {
