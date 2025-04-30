@@ -35,7 +35,7 @@ public class PersonaRepository {
 
     public Persona readrut(String rut){
         for (Persona persona : personas){
-            if(persona.getRut() == rut){
+            if(persona.getRut().equals(rut)){
                 return persona;
             }
         }
