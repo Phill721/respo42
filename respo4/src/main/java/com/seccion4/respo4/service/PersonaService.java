@@ -26,4 +26,8 @@ public class PersonaService {
         return personaRepository.read(id);
     }
 
+    public Persona buscarRut(String rut){
+        return personaRepository.readrut(rut);
+    }
+
 }

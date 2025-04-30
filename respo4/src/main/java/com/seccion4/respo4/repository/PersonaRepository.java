@@ -32,4 +32,13 @@ public class PersonaRepository {
         }
         return null;
     }
+
+    public Persona readrut(String rut){
+        for (Persona persona : personas){
+            if(persona.getRut() == rut){
+                return persona;
+            }
+        }
+        return null;
+    }
 }
