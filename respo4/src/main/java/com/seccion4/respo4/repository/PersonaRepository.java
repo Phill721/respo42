@@ -12,11 +12,24 @@ public class PersonaRepository {
     
     public Persona create(Persona persona){
         personas.add(persona);
+        System.out.println(personas.toString());
         return persona;
     }
- 
+    PersonaRepository(){
+        personas.add(new Persona(1,"12345678-9","Jimmy","Page",81));
+        personas.add(new Persona(2,"87654321-9","Jimi","Hendrix",27));
+    }
 
     public List<Persona> readAll(){
         return personas;
+    }
+
+    public Persona read(int id){
+        for (Persona persona : personas){
+            if(persona.getId()==id){
+                return persona;
+            }
+        }
+        return null;
     }
 }

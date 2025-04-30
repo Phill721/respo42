@@ -10,6 +10,7 @@ import java.util.List;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -37,6 +38,10 @@ public class PersonaController {
         return personaService.listarPersonas();
     }
     
+    @GetMapping("/{id}")
+    public Persona getPersonaId(@PathVariable int id){
+        return personaService.buscarId(id);
+    }
     
     
 }
